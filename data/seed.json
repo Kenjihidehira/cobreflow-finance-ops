@@ -1,0 +1,210 @@
+{
+  "company": {
+    "name": "Acme Design Studio",
+    "segment": "Servicos criativos",
+    "currency": "BRL"
+  },
+  "receivables": [
+    {
+      "id": "INV-2026-1047",
+      "customer": "Studio Alpha",
+      "customerEmail": "financeiro@studioalpha.example",
+      "channel": "Boleto",
+      "dueDate": "2026-06-01",
+      "amount": 7500,
+      "paid": 0,
+      "lastContactAt": "2026-06-24",
+      "promiseDate": null,
+      "notes": "Cliente ignorou 2 lembretes por email."
+    },
+    {
+      "id": "INV-2026-1031",
+      "customer": "Rocket Ltda.",
+      "customerEmail": "contas@rocket.example",
+      "channel": "PIX",
+      "dueDate": "2026-06-19",
+      "amount": 3240,
+      "paid": 0,
+      "lastContactAt": "2026-07-02",
+      "promiseDate": "2026-07-09",
+      "notes": "Promessa de pagamento por WhatsApp."
+    },
+    {
+      "id": "INV-2026-1055",
+      "customer": "BrandCo",
+      "customerEmail": "adm@brandco.example",
+      "channel": "Boleto",
+      "dueDate": "2026-07-08",
+      "amount": 4860,
+      "paid": 0,
+      "lastContactAt": null,
+      "promiseDate": null,
+      "notes": "Primeiro lembrete deve ser educado."
+    },
+    {
+      "id": "INV-2026-1062",
+      "customer": "Pixel Perfect",
+      "customerEmail": "financeiro@pixelperfect.example",
+      "channel": "PIX",
+      "dueDate": "2026-07-10",
+      "amount": 1980,
+      "paid": 0,
+      "lastContactAt": null,
+      "promiseDate": null,
+      "notes": "Cliente costuma pagar no vencimento."
+    },
+    {
+      "id": "INV-2026-1008",
+      "customer": "Beta Solutions",
+      "customerEmail": "ops@betasolutions.example",
+      "channel": "Boleto",
+      "dueDate": "2026-06-28",
+      "amount": 5600,
+      "paid": 1600,
+      "lastContactAt": "2026-07-01",
+      "promiseDate": null,
+      "notes": "Pagamento parcial recebido."
+    },
+    {
+      "id": "INV-2026-0991",
+      "customer": "Design Hub",
+      "customerEmail": "pay@designhub.example",
+      "channel": "PIX",
+      "dueDate": "2026-06-06",
+      "amount": 2450,
+      "paid": 0,
+      "lastContactAt": "2026-06-17",
+      "promiseDate": null,
+      "notes": "Conta antiga com alto risco."
+    },
+    {
+      "id": "INV-2026-0980",
+      "customer": "NextGen Tech",
+      "customerEmail": "billing@nextgen.example",
+      "channel": "Boleto",
+      "dueDate": "2026-05-29",
+      "amount": 9800,
+      "paid": 0,
+      "lastContactAt": "2026-06-10",
+      "promiseDate": null,
+      "notes": "Maior saldo vencido da carteira."
+    },
+    {
+      "id": "INV-2026-1015",
+      "customer": "MarketSpace",
+      "customerEmail": "financeiro@marketspace.example",
+      "channel": "PIX",
+      "dueDate": "2026-06-30",
+      "amount": 1350,
+      "paid": 0,
+      "lastContactAt": "2026-07-05",
+      "promiseDate": null,
+      "notes": "Contato recente, baixo valor."
+    },
+    {
+      "id": "INV-2026-0975",
+      "customer": "Smart Solutions",
+      "customerEmail": "cobranca@smart.example",
+      "channel": "Boleto",
+      "dueDate": "2026-05-28",
+      "amount": 6300,
+      "paid": 0,
+      "lastContactAt": "2026-06-04",
+      "promiseDate": null,
+      "notes": "Necessita contato humano."
+    },
+    {
+      "id": "INV-2026-0942",
+      "customer": "Green Life",
+      "customerEmail": "financeiro@greenlife.example",
+      "channel": "PIX",
+      "dueDate": "2026-06-12",
+      "amount": 2250,
+      "paid": 0,
+      "lastContactAt": "2026-06-25",
+      "promiseDate": null,
+      "notes": "Enviar lembrete com link PIX."
+    },
+    {
+      "id": "INV-2026-1071",
+      "customer": "ClimaTech",
+      "customerEmail": "admin@climatech.example",
+      "channel": "Cartao",
+      "dueDate": "2026-07-15",
+      "amount": 4200,
+      "paid": 0,
+      "lastContactAt": null,
+      "promiseDate": null,
+      "notes": "Recebivel futuro."
+    },
+    {
+      "id": "INV-2026-1074",
+      "customer": "Mais Saude",
+      "customerEmail": "financeiro@maissaude.example",
+      "channel": "Boleto",
+      "dueDate": "2026-07-05",
+      "amount": 3100,
+      "paid": 3100,
+      "lastContactAt": "2026-07-05",
+      "promiseDate": null,
+      "notes": "Quitado e conciliado."
+    }
+  ],
+  "payments": [
+    {
+      "id": "PAY-9091",
+      "receivedAt": "2026-07-08T09:41:00-03:00",
+      "method": "PIX",
+      "amount": 1980,
+      "payer": "Pixel Perfect",
+      "matchedInvoiceId": "INV-2026-1062"
+    },
+    {
+      "id": "PAY-9092",
+      "receivedAt": "2026-07-08T08:17:00-03:00",
+      "method": "Boleto",
+      "amount": 3100,
+      "payer": "Mais Saude",
+      "matchedInvoiceId": "INV-2026-1074"
+    },
+    {
+      "id": "PAY-9093",
+      "receivedAt": "2026-07-07T18:09:00-03:00",
+      "method": "PIX",
+      "amount": 1600,
+      "payer": "Beta Solutions",
+      "matchedInvoiceId": "INV-2026-1008"
+    },
+    {
+      "id": "PAY-9094",
+      "receivedAt": "2026-07-08T10:08:00-03:00",
+      "method": "PIX",
+      "amount": 2250,
+      "payer": "Green Life",
+      "matchedInvoiceId": null
+    }
+  ],
+  "automationRules": [
+    {
+      "id": "rule-soft-reminder",
+      "name": "Lembrete preventivo",
+      "channel": "Email",
+      "condition": "Vence em ate 2 dias",
+      "template": "Aviso educado com dados da fatura e link de pagamento."
+    },
+    {
+      "id": "rule-whatsapp-overdue",
+      "name": "Cobranca WhatsApp",
+      "channel": "WhatsApp",
+      "condition": "Vencido entre 1 e 15 dias",
+      "template": "Mensagem curta com segunda via e pedido de previsao."
+    },
+    {
+      "id": "rule-human-escalation",
+      "name": "Escalonar alto risco",
+      "channel": "Tarefa interna",
+      "condition": "Risco maior que 80 ou vencido ha mais de 30 dias",
+      "template": "Criar tarefa para contato humano com historico do cliente."
+    }
+  ]
+}
