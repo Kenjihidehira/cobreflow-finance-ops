@@ -1,0 +1,25 @@
+{
+  "name": "cobreflow-finance-ops",
+  "version": "1.0.0",
+  "description": "Dashboard financeiro para conciliacao de recebiveis, cobranca ativa e automacoes comerciais.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test tests/*.test.js",
+    "smoke": "node tests/smoke.js",
+    "validate": "node --test tests/*.test.js && node tests/smoke.js"
+  },
+  "keywords": [
+    "financeiro",
+    "dashboard",
+    "recebiveis",
+    "cobranca",
+    "pix",
+    "boleto",
+    "nodejs",
+    "portfolio"
+  ],
+  "author": "Wesley Kenji Ito Hidehira",
+  "license": "MIT"
+}
