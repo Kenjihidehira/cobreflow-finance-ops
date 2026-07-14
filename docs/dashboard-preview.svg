@@ -4,17 +4,17 @@
   <rect x="24" y="30" width="38" height="38" rx="8" fill="#008F85"/>
   <text x="74" y="57" fill="white" font-family="Arial" font-size="25" font-weight="700">CobreFlow</text>
   <rect x="18" y="112" width="212" height="48" rx="8" fill="#007F78"/>
-  <text x="44" y="143" fill="white" font-family="Arial" font-size="15" font-weight="700">Dashboard</text>
-  <text x="44" y="205" fill="#CBD7E5" font-family="Arial" font-size="15" font-weight="700">Recebiveis</text>
-  <text x="44" y="260" fill="#CBD7E5" font-family="Arial" font-size="15" font-weight="700">Conciliacao</text>
-  <text x="44" y="315" fill="#CBD7E5" font-family="Arial" font-size="15" font-weight="700">Cobrancas</text>
+  <text x="44" y="143" fill="white" font-family="Arial" font-size="15" font-weight="700">Painel</text>
+  <text x="44" y="205" fill="#CBD7E5" font-family="Arial" font-size="15" font-weight="700">Recebíveis</text>
+  <text x="44" y="260" fill="#CBD7E5" font-family="Arial" font-size="15" font-weight="700">Conciliação</text>
+  <text x="44" y="315" fill="#CBD7E5" font-family="Arial" font-size="15" font-weight="700">Cobranças</text>
   <text x="44" y="370" fill="#CBD7E5" font-family="Arial" font-size="15" font-weight="700">Relatorios</text>
-  <text x="276" y="58" fill="#18212F" font-family="Arial" font-size="31" font-weight="800">Dashboard financeiro</text>
-  <text x="276" y="86" fill="#667085" font-family="Arial" font-size="16">Recebiveis, conciliacao e cobranca ativa em um fluxo unico.</text>
+  <text x="276" y="58" fill="#18212F" font-family="Arial" font-size="31" font-weight="800">Painel financeiro</text>
+  <text x="276" y="86" fill="#667085" font-family="Arial" font-size="16">Recebíveis, conciliação e cobrança ativa em um fluxo único.</text>
   <rect x="1080" y="28" width="126" height="44" rx="8" fill="white" stroke="#DCE3EA"/>
   <text x="1110" y="56" fill="#18212F" font-family="Arial" font-size="15" font-weight="700">Atualizar</text>
   <rect x="1220" y="28" width="172" height="44" rx="8" fill="#008F85"/>
-  <text x="1246" y="56" fill="white" font-family="Arial" font-size="15" font-weight="700">Rodar automacao</text>
+  <text x="1246" y="56" fill="white" font-family="Arial" font-size="15" font-weight="700">Rodar automação</text>
   <g>
     <rect x="276" y="120" width="250" height="118" rx="8" fill="white" stroke="#DCE3EA"/>
     <circle cx="316" cy="166" r="25" fill="#008F85"/>
@@ -30,17 +30,17 @@
   <g>
     <rect x="816" y="120" width="250" height="118" rx="8" fill="white" stroke="#DCE3EA"/>
     <circle cx="856" cy="166" r="25" fill="#F59E0B"/>
-    <text x="895" y="158" fill="#667085" font-family="Arial" font-size="14">Conciliacao</text>
+    <text x="895" y="158" fill="#667085" font-family="Arial" font-size="14">Conciliação</text>
     <text x="895" y="190" fill="#18212F" font-family="Arial" font-size="25" font-weight="800">R$ 6.680</text>
   </g>
   <g>
     <rect x="1086" y="120" width="306" height="118" rx="8" fill="white" stroke="#DCE3EA"/>
     <circle cx="1126" cy="166" r="25" fill="#334155"/>
     <text x="1165" y="158" fill="#667085" font-family="Arial" font-size="14">Prioridade</text>
-    <text x="1165" y="190" fill="#18212F" font-family="Arial" font-size="25" font-weight="800">7 acoes</text>
+    <text x="1165" y="190" fill="#18212F" font-family="Arial" font-size="25" font-weight="800">7 ações</text>
   </g>
   <rect x="276" y="260" width="790" height="640" rx="8" fill="white" stroke="#DCE3EA"/>
-  <text x="300" y="303" fill="#18212F" font-family="Arial" font-size="22" font-weight="800">Recebiveis</text>
+  <text x="300" y="303" fill="#18212F" font-family="Arial" font-size="22" font-weight="800">Recebíveis</text>
   <rect x="300" y="334" width="742" height="42" fill="#F8FAFC"/>
   <text x="324" y="360" fill="#475467" font-family="Arial" font-size="13" font-weight="700">FATURA / CLIENTE</text>
   <text x="520" y="360" fill="#475467" font-family="Arial" font-size="13" font-weight="700">VENCIMENTO</text>
@@ -67,7 +67,7 @@
     <text x="917" y="517" fill="#DC2626" font-size="13" font-weight="700">Vencido</text>
   </g>
   <rect x="1086" y="260" width="306" height="640" rx="8" fill="white" stroke="#DCE3EA"/>
-  <text x="1110" y="303" fill="#18212F" font-family="Arial" font-size="21" font-weight="800">Automacao de cobranca</text>
+  <text x="1110" y="303" fill="#18212F" font-family="Arial" font-size="21" font-weight="800">Automação de cobrança</text>
   <rect x="1110" y="346" width="258" height="96" rx="8" fill="#F8FAFC" stroke="#DCE3EA"/>
   <text x="1130" y="377" fill="#18212F" font-family="Arial" font-size="15" font-weight="700">NextGen Tech</text>
   <text x="1130" y="405" fill="#667085" font-family="Arial" font-size="14">Escalonar alto risco</text>

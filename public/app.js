@@ -15,8 +15,12 @@ const statusLabels = {
   partial: "Parcial",
   overdue: "Vencido",
   due_today: "Vence hoje",
-  due_soon: "Proximo",
+  due_soon: "Próximo",
   open: "Aberto"
+};
+
+const channelLabels = {
+  Cartao: "Cartão"
 };
 
 function qs(selector) {
@@ -47,7 +51,7 @@ function renderSummary(summary) {
 
 function renderReceivables(payload) {
   const body = qs("#receivablesBody");
-  qs("#resultCount").textContent = `${payload.count} de ${payload.total} recebiveis`;
+  qs("#resultCount").textContent = `${payload.count} de ${payload.total} recebíveis`;
 
   body.innerHTML = payload.receivables.map((item) => {
     const dueText = item.overdueDays > 0 ? `${item.overdueDays} dias vencido` : item.dueDate;
@@ -62,7 +66,7 @@ function renderReceivables(payload) {
         <td class="${item.balance > 0 ? "money-negative" : ""}">${money.format(item.balance)}</td>
         <td><span class="risk-pill ${riskClass(item)}">${item.riskScore}</span></td>
         <td><span class="status-pill status-${item.status}">${status}</span></td>
-        <td>${item.channel}</td>
+        <td>${channelLabels[item.channel] || item.channel}</td>
       </tr>
     `;
   }).join("");
@@ -77,7 +81,7 @@ function renderAutomation(payload) {
         <strong>${item.customer}</strong>
         <span class="risk-pill ${riskClass(item)}">${item.riskScore}</span>
       </header>
-      <p>${item.action} via ${item.channel}</p>
+      <p>${item.action} via ${channelLabels[item.channel] || item.channel}</p>
       <p>${item.invoiceId} - ${money.format(item.balance)} - ${item.reason}</p>
     </article>
   `).join("");
@@ -117,7 +121,7 @@ async function runReconciliation() {
   const result = await fetchJson("/api/reconcile", { method: "POST" });
   qs("#automationLog").textContent = result.actions.length
     ? `${result.actions.length} pagamento pendente conciliado automaticamente.`
-    : "Nenhum pagamento pendente com correspondencia exata.";
+    : "Nenhum pagamento pendente com correspondência exata.";
   renderSummary(result.summary);
 }
 

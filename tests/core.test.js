@@ -19,7 +19,7 @@ test("calcula risco maior para faturas antigas e com saldo alto", () => {
   assert.ok(calculateRiskScore(highRisk) > calculateRiskScore(lowRisk));
 });
 
-test("resume carteira com saldo vencido, prioridades e conciliacao", () => {
+test("resume carteira com saldo vencido, prioridades e conciliação", () => {
   const summary = buildSummary(data);
 
   assert.equal(summary.overdueCount, 8);
@@ -28,7 +28,7 @@ test("resume carteira com saldo vencido, prioridades e conciliacao", () => {
   assert.ok(summary.highPriorityCount >= 3);
 });
 
-test("monta fila de automacao priorizada por risco", () => {
+test("monta fila de automação priorizada por risco", () => {
   const queue = buildAutomationQueue(data);
 
   assert.equal(queue[0].customer, "NextGen Tech");
@@ -44,7 +44,7 @@ test("concilia pagamento pendente quando cliente e valor batem", () => {
   assert.equal(reconciled.reconciliationActions.length, 1);
 });
 
-test("filtra recebiveis por canal, status e busca", () => {
+test("filtra recebíveis por canal, status e busca", () => {
   const enriched = enrichReceivables(data.receivables);
   const result = filterReceivables(enriched, {
     channel: "PIX",

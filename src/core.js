@@ -121,7 +121,7 @@ export function buildAutomationQueue(data, today = "2026-07-08") {
       priority: item.priority,
       action: rule.name,
       channel: rule.channel,
-      reason: item.overdueDays > 0 ? `${item.overdueDays} dias vencido` : "vencimento proximo",
+      reason: item.overdueDays > 0 ? `${item.overdueDays} dias vencido` : "vencimento próximo",
       template: rule.template
     };
   });

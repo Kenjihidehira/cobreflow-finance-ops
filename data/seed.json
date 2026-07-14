@@ -1,7 +1,7 @@
 {
   "company": {
     "name": "Acme Design Studio",
-    "segment": "Servicos criativos",
+    "segment": "Serviços criativos",
     "currency": "BRL"
   },
   "receivables": [
@@ -139,7 +139,7 @@
     },
     {
       "id": "INV-2026-1074",
-      "customer": "Mais Saude",
+      "customer": "Mais Saúde",
       "customerEmail": "financeiro@maissaude.example",
       "channel": "Boleto",
       "dueDate": "2026-07-05",
@@ -164,7 +164,7 @@
       "receivedAt": "2026-07-08T08:17:00-03:00",
       "method": "Boleto",
       "amount": 3100,
-      "payer": "Mais Saude",
+      "payer": "Mais Saúde",
       "matchedInvoiceId": "INV-2026-1074"
     },
     {
@@ -189,22 +189,22 @@
       "id": "rule-soft-reminder",
       "name": "Lembrete preventivo",
       "channel": "Email",
-      "condition": "Vence em ate 2 dias",
+      "condition": "Vence em até 2 dias",
       "template": "Aviso educado com dados da fatura e link de pagamento."
     },
     {
       "id": "rule-whatsapp-overdue",
-      "name": "Cobranca WhatsApp",
+      "name": "Cobrança WhatsApp",
       "channel": "WhatsApp",
       "condition": "Vencido entre 1 e 15 dias",
-      "template": "Mensagem curta com segunda via e pedido de previsao."
+      "template": "Mensagem curta com segunda via e pedido de previsão."
     },
     {
       "id": "rule-human-escalation",
       "name": "Escalonar alto risco",
       "channel": "Tarefa interna",
       "condition": "Risco maior que 80 ou vencido ha mais de 30 dias",
-      "template": "Criar tarefa para contato humano com historico do cliente."
+      "template": "Criar tarefa para contato humano com histórico do cliente."
     }
   ]
 }

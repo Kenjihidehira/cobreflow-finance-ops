@@ -24,7 +24,7 @@ try {
 
   const html = await fetch(baseUrl).then((response) => response.text());
   assert.ok(html.includes("CobreFlow Finance Ops"));
-  assert.ok(html.includes("Rodar automacao"));
+  assert.ok(html.includes("Rodar automação"));
 
   const receivables = await fetch(`${baseUrl}/api/receivables`).then((response) => response.json());
   assert.ok(receivables.count >= 10);

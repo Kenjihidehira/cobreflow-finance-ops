@@ -1,43 +1,43 @@
 # CobreFlow Finance Ops
 
-Dashboard financeiro full-stack para pequenas empresas acompanharem recebiveis, conciliacao de pagamentos e cobranca ativa em um unico fluxo operacional.
+Painel financeiro completo para pequenas empresas acompanharem recebíveis, conciliação de pagamentos e cobrança ativa em um único fluxo operacional.
 
-O projeto foi pensado como peca de portfolio para propostas freelance: ele resolve uma dor comercial clara, mostra tela, API, regras de negocio, dados de exemplo, automacoes simuladas e testes nativos.
+O projeto foi pensado como peça de portfólio para propostas freelance: ele resolve uma dor comercial clara, mostra tela, API, regras de negócio, dados de exemplo, automações simuladas e testes nativos.
 
 ## Valor comercial
 
-Pequenas empresas perdem caixa por atraso de pagamento, baixa manual de PIX/boleto e falta de prioridade na cobranca. O CobreFlow centraliza:
+Pequenas empresas perdem caixa por atraso de pagamento, baixa manual de PIX ou boleto e falta de prioridade na cobrança. O CobreFlow centraliza:
 
-- carteira de recebiveis com status e saldo em aberto;
-- score de risco por atraso, valor e historico de contato;
-- fila de cobranca automatizada por email, WhatsApp ou tarefa interna;
-- conciliacao simulada de pagamentos pendentes;
-- dashboard de KPIs para decisao rapida de caixa.
+- carteira de recebíveis com status e saldo em aberto;
+- pontuação de risco por atraso, valor e histórico de contato;
+- fila de cobrança automatizada por e-mail, WhatsApp ou tarefa interna;
+- conciliação simulada de pagamentos pendentes;
+- painel de KPIs para decisão rápida de caixa.
 
-Esse tipo de sistema pode ser vendido para prestadores de servico, agencias, clinicas, assistencias tecnicas, pequenas distribuidoras e times financeiros que ainda controlam cobrancas em planilhas.
+Esse tipo de sistema pode ser vendido para prestadores de serviço, agências, clínicas, assistências técnicas, pequenas distribuidoras e times financeiros que ainda controlam cobranças em planilhas.
 
-## Preview
+## Prévia
 
-![Preview do dashboard](docs/dashboard-preview.svg)
+![Prévia do painel](docs/dashboard-preview.svg)
 
 ## Funcionalidades
 
-- Dashboard responsivo com KPIs de entrada prevista, vencidos, conciliacao e acoes prioritarias.
-- Tabela de recebiveis com busca, filtro por status, filtro por canal e risco financeiro.
+- Painel responsivo com KPIs de entrada prevista, vencidos, conciliação e ações prioritárias.
+- Tabela de recebíveis com busca, filtro por status, filtro por canal e risco financeiro.
 - API REST sem dependencias externas, usando Node.js nativo.
-- Score de risco calculado por saldo, dias vencidos, contato recente e promessa de pagamento.
-- Simulacao de envio de lembretes por automacao.
-- Simulacao de conciliacao de pagamentos pendentes.
-- Dados seed comerciais com clientes, faturas, canais e regras de automacao.
+- Pontuação de risco calculada por saldo, dias vencidos, contato recente e promessa de pagamento.
+- Simulação de envio de lembretes por automação.
+- Simulação de conciliação de pagamentos pendentes.
+- Dados de exemplo comerciais com clientes, faturas, canais e regras de automação.
 - Testes unitarios e testes de API com `node:test`.
-- Dockerfile pronto para deploy em plataformas que executam containers.
+- Dockerfile pronto para publicação em plataformas que executam contêineres.
 
 ## Stack
 
 - Node.js nativo
 - HTML, CSS e JavaScript puro
 - `node:test`
-- Dados JSON seed
+- Dados JSON de exemplo
 - Docker
 
 ## Como rodar localmente
@@ -54,7 +54,7 @@ Acesse:
 http://localhost:3000
 ```
 
-## Validacao
+## Validação
 
 ```bash
 npm test
@@ -71,7 +71,7 @@ npm run validate
 
 ### `GET /api/health`
 
-Retorna status do servico.
+Retorna status do serviço.
 
 ### `GET /api/summary`
 
@@ -81,11 +81,11 @@ Retorna KPIs financeiros:
 - saldo vencido;
 - quantidade de faturas vencidas;
 - prioridades;
-- conciliacao de pagamentos.
+- conciliação de pagamentos.
 
 ### `GET /api/receivables`
 
-Lista recebiveis enriquecidos com saldo, status, dias vencidos, score e prioridade.
+Lista recebíveis enriquecidos com saldo, status, dias vencidos, pontuação e prioridade.
 
 Parametros opcionais:
 
@@ -101,7 +101,7 @@ Exemplo:
 
 ### `GET /api/automations`
 
-Retorna regras de automacao e fila priorizada de cobranca.
+Retorna regras de automação e fila priorizada de cobrança.
 
 ### `POST /api/reminders/run`
 
@@ -117,9 +117,9 @@ Body:
 
 ### `POST /api/reconcile`
 
-Simula conciliacao automatica de pagamentos pendentes quando cliente e valor batem com uma fatura aberta.
+Simula conciliação automática de pagamentos pendentes quando cliente e valor batem com uma fatura aberta.
 
-## Deploy
+## Publicação
 
 ### Docker
 
@@ -130,27 +130,27 @@ docker run -p 3000:3000 cobreflow-finance-ops
 
 ### Render, Railway, Fly.io ou similar
 
-- Build command: nao necessario se usar Dockerfile.
-- Start command: `node src/server.js`
+- Comando de compilação: não é necessário se usar Dockerfile.
+- Comando de inicialização: `node src/server.js`
 - Porta: usar variavel `PORT` fornecida pela plataforma.
 
-Deploy real nao esta incluido por padrao porque depende de credencial e conta configurada na plataforma escolhida.
+A publicação real não está incluída por padrão porque depende de credencial e conta configurada na plataforma escolhida.
 
-## Possiveis melhorias comerciais
+## Possíveis melhorias comerciais
 
-- Integracao real com gateway PIX/boleto.
+- Integração real com gateway PIX ou boleto.
 - Login multiempresa e permissoes por perfil.
 - Webhooks de pagamento.
 - Envio real por WhatsApp Business Cloud ou email transacional.
-- Historico completo de contatos por cliente.
-- Exportacao CSV/PDF para financeiro.
+- Histórico completo de contatos por cliente.
+- Exportação CSV/PDF para financeiro.
 - Persistencia em Postgres.
-- Painel de templates de cobranca editaveis.
+- Painel de modelos de cobrança editáveis.
 
-## Diferenciais para portfolio
+## Diferenciais para portfólio
 
-- Foca em um problema comercial claro, nao em CRUD generico.
-- Demonstra regras de negocio e priorizacao financeira.
-- Mostra API, dashboard e automacao no mesmo projeto.
-- Inclui seed realista, testes e Dockerfile.
-- Pode ser explicado em propostas como base de MVP para cobranca e contas a receber.
+- Foca em um problema comercial claro, não em CRUD genérico.
+- Demonstra regras de negócio e priorização financeira.
+- Mostra API, painel e automação no mesmo projeto.
+- Inclui dados de exemplo realistas, testes e Dockerfile.
+- Pode ser explicado em propostas como base de MVP para cobrança e contas a receber.

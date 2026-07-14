@@ -1,7 +1,7 @@
 {
   "name": "cobreflow-finance-ops",
   "version": "1.0.0",
-  "description": "Dashboard financeiro para conciliacao de recebiveis, cobranca ativa e automacoes comerciais.",
+  "description": "Painel financeiro para conciliação de recebíveis, cobrança ativa e automações comerciais.",
   "type": "module",
   "main": "src/server.js",
   "scripts": {

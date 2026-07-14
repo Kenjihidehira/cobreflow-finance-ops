@@ -14,28 +14,28 @@
           <span>CobreFlow</span>
         </a>
         <nav class="nav-list" aria-label="Principal">
-          <button class="nav-item active" type="button">Dashboard</button>
-          <button class="nav-item" type="button">Recebiveis</button>
-          <button class="nav-item" type="button">Conciliacao</button>
-          <button class="nav-item" type="button">Cobrancas</button>
+          <button class="nav-item active" type="button">Painel</button>
+          <button class="nav-item" type="button">Recebíveis</button>
+          <button class="nav-item" type="button">Conciliação</button>
+          <button class="nav-item" type="button">Cobranças</button>
           <button class="nav-item" type="button">Relatorios</button>
           <button class="nav-item" type="button">Configuracoes</button>
         </nav>
         <div class="account-card">
           <strong>Acme Design Studio</strong>
-          <span>Plano Business</span>
+          <span>Plano Empresarial</span>
         </div>
       </aside>
 
       <main class="workspace">
         <header class="topbar">
           <div>
-            <h1>Dashboard financeiro</h1>
-            <p>Recebiveis, conciliacao e cobranca ativa em um fluxo unico.</p>
+            <h1>Painel financeiro</h1>
+            <p>Recebíveis, conciliação e cobrança ativa em um fluxo único.</p>
           </div>
           <div class="topbar-actions">
             <button id="refreshBtn" class="ghost-button" type="button">Atualizar</button>
-            <button id="runAutomationBtn" class="primary-button" type="button">Rodar automacao</button>
+            <button id="runAutomationBtn" class="primary-button" type="button">Rodar automação</button>
           </div>
         </header>
 
@@ -54,7 +54,7 @@
           </article>
           <article class="kpi-card">
             <span class="kpi-icon amber">=</span>
-            <p>Conciliacao</p>
+            <p>Conciliação</p>
             <strong id="reconciliationAmount">R$ 0,00</strong>
             <small id="reconciliationCount">0 baixas</small>
           </article>
@@ -62,7 +62,7 @@
             <span class="kpi-icon graphite">#</span>
             <p>Prioridade</p>
             <strong id="priorityCount">0</strong>
-            <small>acoes urgentes</small>
+            <small>ações urgentes</small>
           </article>
         </section>
 
@@ -70,7 +70,7 @@
           <section class="panel receivables-panel" aria-labelledby="receivablesTitle">
             <div class="panel-header">
               <div>
-                <h2 id="receivablesTitle">Recebiveis</h2>
+                <h2 id="receivablesTitle">Recebíveis</h2>
                 <p id="resultCount">Carregando carteira...</p>
               </div>
               <div class="filters">
@@ -80,14 +80,14 @@
                   <option value="overdue">Vencidos</option>
                   <option value="partial">Parcial</option>
                   <option value="due_today">Vence hoje</option>
-                  <option value="critical">Risco critico</option>
+                  <option value="critical">Risco crítico</option>
                   <option value="high">Risco alto</option>
                 </select>
                 <select id="channelFilter" aria-label="Filtrar por canal">
                   <option value="all">Todos os canais</option>
                   <option value="PIX">PIX</option>
                   <option value="Boleto">Boleto</option>
-                  <option value="Cartao">Cartao</option>
+                  <option value="Cartao">Cartão</option>
                 </select>
               </div>
             </div>
@@ -113,7 +113,7 @@
           <aside class="panel automation-panel" aria-labelledby="automationTitle">
             <div class="panel-header compact">
               <div>
-                <h2 id="automationTitle">Automacao de cobranca</h2>
+                <h2 id="automationTitle">Automação de cobrança</h2>
                 <p>Fila priorizada por risco e saldo.</p>
               </div>
               <span class="live-dot">Ativa</span>

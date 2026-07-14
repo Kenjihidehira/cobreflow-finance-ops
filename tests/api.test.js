@@ -40,7 +40,7 @@ test("GET /api/receivables aplica filtros", async () => {
   });
 });
 
-test("POST /api/reminders/run simula envio de cobrancas", async () => {
+test("POST /api/reminders/run simula envio de cobranças", async () => {
   await withServer(async (baseUrl) => {
     const response = await fetch(`${baseUrl}/api/reminders/run`, {
       method: "POST",
