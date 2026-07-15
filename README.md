@@ -1,8 +1,20 @@
 # CobreFlow Finance Ops
 
+[![CI](https://github.com/Kenjihidehira/cobreflow-finance-ops/actions/workflows/ci.yml/badge.svg)](https://github.com/Kenjihidehira/cobreflow-finance-ops/actions/workflows/ci.yml)
+[![Demo pública](https://img.shields.io/badge/demo-pública-0f766e)](https://cobreflow-finance.dadosepesquisa.chatgpt.site)
+
 Painel financeiro completo para pequenas empresas acompanharem recebíveis, conciliação de pagamentos e cobrança ativa em um único fluxo operacional.
 
 O projeto foi pensado como peça de portfólio para propostas freelance: ele resolve uma dor comercial clara, mostra tela, API, regras de negócio, dados de exemplo, automações simuladas e testes nativos.
+
+## Prova comercial publicada
+
+- **Demo:** [cobreflow-finance.dadosepesquisa.chatgpt.site](https://cobreflow-finance.dadosepesquisa.chatgpt.site)
+- **Autenticação:** carteira demonstrável publicamente; conciliação e cobrança persistente exigem Sign in with ChatGPT.
+- **Persistência:** recebíveis e histórico operacional usam workspace D1 isolado por usuário.
+- **Integridade financeira:** a conciliação automática só ocorre com correspondência exata de cliente e valor.
+- **Entrega:** CI, testes de domínio, build Vinext, migration reversível e deploy público versionado.
+- **Arquitetura:** [`docs/architecture.md`](docs/architecture.md).
 
 ## Valor comercial
 
@@ -39,6 +51,7 @@ Esse tipo de sistema pode ser vendido para prestadores de serviço, agências, c
 - `node:test`
 - Dados JSON de exemplo
 - Docker
+- Vinext/React e Cloudflare D1 na versão comercial hospedada
 
 ## Como rodar localmente
 
@@ -121,6 +134,8 @@ Simula conciliação automática de pagamentos pendentes quando cliente e valor 
 
 ## Publicação
 
+A prova comercial está ativa no [OpenAI Sites](https://cobreflow-finance.dadosepesquisa.chatgpt.site). O diretório `sites/` contém a versão hospedada com autenticação, D1 e pipeline de build; a implementação Node original permanece disponível para Docker.
+
 ### Docker
 
 ```bash
@@ -134,17 +149,15 @@ docker run -p 3000:3000 cobreflow-finance-ops
 - Comando de inicialização: `node src/server.js`
 - Porta: usar variavel `PORT` fornecida pela plataforma.
 
-A publicação real não está incluída por padrão porque depende de credencial e conta configurada na plataforma escolhida.
-
 ## Possíveis melhorias comerciais
 
 - Integração real com gateway PIX ou boleto.
-- Login multiempresa e permissoes por perfil.
+- Permissões granulares por empresa e perfil.
 - Webhooks de pagamento.
 - Envio real por WhatsApp Business Cloud ou email transacional.
 - Histórico completo de contatos por cliente.
 - Exportação CSV/PDF para financeiro.
-- Persistencia em Postgres.
+- Adaptador PostgreSQL para instalações fora do Sites.
 - Painel de modelos de cobrança editáveis.
 
 ## Diferenciais para portfólio

@@ -1,4 +1,8 @@
 node_modules/
+sites/.next/
+sites/node_modules/
+sites/dist/
+sites/.wrangler/
 .env
 .DS_Store
 coverage/
