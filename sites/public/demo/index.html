@@ -15,12 +15,11 @@
           <span>CobreFlow</span>
         </a>
         <nav class="nav-list" aria-label="Principal">
-          <button class="nav-item active" type="button">Painel</button>
-          <button class="nav-item" type="button">Recebíveis</button>
-          <button class="nav-item" type="button">Conciliação</button>
-          <button class="nav-item" type="button">Cobranças</button>
-          <button class="nav-item" type="button">Relatorios</button>
-          <button class="nav-item" type="button">Configuracoes</button>
+          <a class="nav-item active" href="#financeDashboard">Painel</a>
+          <a class="nav-item" href="#receivables">Recebíveis</a>
+          <a class="nav-item" href="#automation">Cobrança automática</a>
+          <a class="nav-item" href="#metrics">Indicadores</a>
+          <a class="nav-item" href="/api/state">API JSON</a>
         </nav>
         <div class="account-card">
           <strong>Acme Design Studio</strong>
@@ -28,7 +27,7 @@
         </div>
       </aside>
 
-      <main class="workspace">
+      <main id="financeDashboard" class="workspace">
         <header class="topbar">
           <div>
             <h1>Painel financeiro</h1>
@@ -40,27 +39,27 @@
           </div>
         </header>
 
-        <section class="kpi-grid" aria-label="Indicadores financeiros">
+        <section id="metrics" class="kpi-grid" aria-label="Indicadores financeiros">
           <article class="kpi-card">
-            <span class="kpi-icon teal">$</span>
+            <span class="kpi-icon teal">Prev.</span>
             <p>Entrada prevista</p>
             <strong id="expectedCashIn">R$ 0,00</strong>
             <small>Carteira aberta</small>
           </article>
           <article class="kpi-card">
-            <span class="kpi-icon red">!</span>
+            <span class="kpi-icon red">Venc.</span>
             <p>Vencido</p>
             <strong id="overdueBalance">R$ 0,00</strong>
             <small id="overdueCount">0 faturas</small>
           </article>
           <article class="kpi-card">
-            <span class="kpi-icon amber">=</span>
+            <span class="kpi-icon amber">Baixas</span>
             <p>Conciliação</p>
             <strong id="reconciliationAmount">R$ 0,00</strong>
             <small id="reconciliationCount">0 baixas</small>
           </article>
           <article class="kpi-card">
-            <span class="kpi-icon graphite">#</span>
+            <span class="kpi-icon graphite">Ações</span>
             <p>Prioridade</p>
             <strong id="priorityCount">0</strong>
             <small>ações urgentes</small>
@@ -68,7 +67,7 @@
         </section>
 
         <section class="content-grid">
-          <section class="panel receivables-panel" aria-labelledby="receivablesTitle">
+          <section id="receivables" class="panel receivables-panel" aria-labelledby="receivablesTitle">
             <div class="panel-header">
               <div>
                 <h2 id="receivablesTitle">Recebíveis</h2>
@@ -90,6 +89,13 @@
                   <option value="Boleto">Boleto</option>
                   <option value="Cartao">Cartão</option>
                 </select>
+                <select id="sortFilter" aria-label="Ordenar recebiveis">
+                  <option value="risk">Maior risco</option>
+                  <option value="balance">Maior saldo</option>
+                  <option value="due">Vencimento</option>
+                  <option value="customer">Cliente A-Z</option>
+                </select>
+                <button id="clearFilters" class="filter-button" type="button">Limpar</button>
               </div>
             </div>
             <div class="table-wrap">
@@ -106,12 +112,12 @@
                     <th>Canal</th>
                   </tr>
                 </thead>
-                <tbody id="receivablesBody"></tbody>
+                <tbody id="receivablesBody" aria-live="polite" aria-busy="true"></tbody>
               </table>
             </div>
           </section>
 
-          <aside class="panel automation-panel" aria-labelledby="automationTitle">
+          <aside id="automation" class="panel automation-panel" aria-labelledby="automationTitle">
             <div class="panel-header compact">
               <div>
                 <h2 id="automationTitle">Automação de cobrança</h2>
